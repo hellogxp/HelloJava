@@ -11,17 +11,18 @@ application can terminate. We could use Java APIs to manage shutdown hooks.
 
 The JVM can be shutdown in two different ways:
 
-1. A controller process 2. An abrupt manner
+1. A controller process 
+2. An abrupt manner
 
-A controller process shuts down the JVM when either:
+**A controller process shuts down the JVM when either**:
 
     * The last non-daemon thread terminated. For example, when the main thread exits, the JVM starts its shutdown
       process
     * Sending an interrupt signal from the OS. For instance, by pressing Ctrl + C or logging off the OS
     * Calling System.exit() from Java code.
 
-While we strive for graceful shutdowns, sometimes the JVM may shut down in an abrupt and unexpected manner. The JVM
-shuts down abruptly when:
+While we strive for graceful shutdowns, sometimes the JVM may shut down in an abrupt and unexpected manner. **The JVM
+shuts down abruptly when**:
 
     * Sending a kill signal from the OS. For example, by issuing a kill -9 <jvm_pid>
     * Calling Runtime.getRuntime().halt() from Java code.
