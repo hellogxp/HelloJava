@@ -98,3 +98,16 @@ git config user.email "MY_NAME@example.com"
 ```git
 cat .git/config
 ```
+
+### Fetch remote brancds that not exis locally and set up to track remote branhcn
+
+1. Fetch remote brands that not exis remotely
+```git
+git fetch -all
+```
+
+2. Set up to track the remote branch
+```git
+git switch
+```
+
