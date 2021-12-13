@@ -111,3 +111,10 @@ git fetch -all
 git switch
 ```
 
+### Based on the remote branch to build a local branch, and then set up to track remote branch    
+```git
+git checkout --track origin/remotebranch
+```
+Based on the remote branch "origin/remotebranch", we now have a new local branch named "remotebranch".
+
+
