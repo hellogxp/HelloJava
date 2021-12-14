@@ -117,4 +117,11 @@ git checkout --track origin/remotebranch
 ```
 Based on the remote branch "origin/remotebranch", we now have a new local branch named "remotebranch".
 
+### Show a branch log    
+If you are not in the branch, then you can add the branch name to the "git log" command, like this:
+```git
+git log master..branchname
+```
+If your branch was made off of origin/master, then say origin/master instead of master.
+
 
