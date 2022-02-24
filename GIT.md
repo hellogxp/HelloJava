@@ -124,4 +124,13 @@ git log master..branchname
 ```
 If your branch was made off of origin/master, then say origin/master instead of master.
 
+### Back to previous commit and push to remote
+
+```shell
+ git reset --hard HEAD^
+```
+
+```
+git push -f origin remotebranch
+```
 
