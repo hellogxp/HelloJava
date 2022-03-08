@@ -51,8 +51,8 @@ git reset --hard HEAD^
 
 #### Go back to previous state (soft).
 
-Keeping the changes, the existing changes will be kept, and in the uncommite, we can use `git status` or `git diff` to view
-the changes.
+Keeping the changes, the existing changes will be kept, and in the uncommite, we can use `git status` or `git diff` to
+view the changes.
 
 ```git
 git reset --soft HEAD^
@@ -101,27 +101,43 @@ cat .git/config
 
 ### Fetch remote brancds that not exis locally and set up to track remote branhcn
 
-1. Fetch remote brands that not exis remotely
+1. Fetch all of remote brands for you
+
 ```git
 git fetch -all
+```    
+
+We can see the branches available for checkout with:
+
+```shell
+git branch -v -a
 ```
 
 2. Set up to track the remote branch
-```git
-git switch
-```
 
-### Based on the remote branch to build a local branch, and then set up to track remote branch    
+```git
+git switch origin/remote_branch
+```     
+
+In this case Git is guessing (can be disabled with --no-guess) that you are trying to checkout and track the remote
+branch with the same name.
+
+### Based on the remote branch to build a local branch, and then set up to track remote branch
+
 ```git
 git checkout --track origin/remotebranch
 ```
+
 Based on the remote branch "origin/remotebranch", we now have a new local branch named "remotebranch".
 
-### Show a branch log    
+### Show a branch log
+
 If you are not in the branch, then you can add the branch name to the "git log" command, like this:
+
 ```git
 git log master..branchname
 ```
+
 If your branch was made off of origin/master, then say origin/master instead of master.
 
 ### Back to previous commit and push to remote
